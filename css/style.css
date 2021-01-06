@@ -1,0 +1,351 @@
+/* ************ Custom Properties ************ */
+:root{
+    --gray: #F5F5F5;
+    --dark-blue: #19224D;
+    --primary-green: #9AC8B2;
+    --soft-blue: #0077CB;
+    --black-color: #000;
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+    --white-color: #FFF;
+    --white-alpha-color: rgba(255, 255, 255, 0.5);
+    --text-color: #19224D;
+    --title-font: "SamsungSharpSans", sans-serif;
+    --content-font: "SamsungOne 400", sans-serif;
+    --max-width: 1200px;
+    --width-cards: 400px;
+    --header-height:4rem;
+    /* estos son del curso */
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #0077CB;
+    --second-color: #222;
+    --main-modal-color: rgba(247, 222, 30, 0.85);
+    --second-modal-color: rgba(34, 34, 34, 0.85);
+    --container-width: 1200px;
+}
+/* ************ Reset ************ */
+@font-face{
+    font-family: "samsungSharpSans";
+    src: url('../assets/fonts/SamsungSharpSans-Bold.ttf') format('truetype');
+
+}
+@font-face{
+    font-family: "SamsungOne";
+    src: url('../assets/fonts/SamsungOne-400.ttf') format('truetype');
+    src: url('../assets/fonts/SamsungOne-500.ttf') format('truetype');
+    src: url('../assets/fonts/SamsungOne-700.ttf') format('truetype');
+    src: url('../assets/fonts/SamsungOne-800.ttf') format('truetype');
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--content-font), sans-serif;
+    font-size: 16px;
+}
+body{
+    background-color: var(--gray);
+    color: var(--text-color);
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+h1{
+    font-family: var(--title-font);
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2{
+    font-family: var(--title-font);
+    font-size: 2rem;
+    margin: 0;
+}
+
+h3{
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    font-family: var(--content-font);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* ************ Components ************ */
+/* ********** menu hamburguesa ********** */
+
+.section {
+    padding: 2rem;
+    padding-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+  }
+  .panel{
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: var(--second-modal-color);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.5s ease;
+      transform: translate(0, 100%);
+      display: flex;
+      background: white;
+  }
+  .panel.is-active {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  .panel-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+  }
+  .menu {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  .menu a {
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+    font-weight: bold;
+    color: var(--second-color);
+  }
+  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before{
+      background-color: white;
+  }
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+    background-color: white;
+
+  }
+
+  @media screen and (min-width: 1024px) {
+      .header{
+
+      }
+      .panel-btn{
+          display: none;
+      }
+      .panel{
+          background: none;
+          position: inherit;
+          opacity: 1;
+          top: 0;
+          margin: 0;
+          transition: none;
+          transform: none;
+      }
+      .contenedor-menu{
+          position: fixed;
+          height: 80px;
+          background-color: var(--soft-blue);
+          top: 4rem;
+          width: 100%;
+      }
+      .menu{
+          height: 80px;
+          background-color: var(--white-color);
+          box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
+          flex-direction: row;
+          opacity: 1;
+         
+      }
+      .menu a{
+          padding: 0;
+          color: var(--dark-blue);
+      }
+
+  }
+
+/* ************ Instrucciones ************ */
+.instrucciones{
+
+    padding: 30px;
+    text-align: center;
+    
+}
+.titulo-instrucciones{
+    margin-bottom: 20px;
+}
+.container{
+    margin: auto;
+}
+.pasos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.numero{
+    width: 100%;
+    background-color: var(--primary-green);
+    padding: .5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: .25rem;
+    margin-bottom: 16px;
+}
+.contenido-paso1{
+    text-align: left;
+   
+}
+.paso1{
+
+    max-width: var(--width-cards);
+    border-radius: .5rem;
+    background: var(--white-color);
+    padding: 16px;
+    margin: 16px auto;
+    
+   
+   
+
+}
+.paso2{
+   
+    max-width: var(--width-cards);
+    border-radius: .5rem;
+    background: var(--white-color);
+    padding: 16px;
+    margin: 16px auto;
+   
+
+}
+
+.paso3{
+   
+    max-width: var(--width-cards);
+    border-radius: .5rem;
+    background: var(--white-color);
+    padding: 16px;
+    margin: 16px auto;
+
+
+}
+
+/* ************ Footer ************ */
+.footer{
+    color: var(--white-color);
+    padding: 4rem;
+    background-color: var(--dark-blue);
+    text-align: center;
+}
+
+
+/* ************ Utilities ************ */
+.btn{
+    border-radius: .5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--soft-blue);
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+.none{
+    display: none;
+}
+
+/* ************ Site Styles ************ */
+.header{
+
+    top: 0;
+    padding: 1rem;
+    background-color: var(--primary-green);
+    color: var(--second-color);
+    
+}
+.header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+.logo{
+    text-align: center;
+}
+
+.logo a{
+    font-family: var(--title-font);
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+
+/* ************ mediaquery ************ */
+@media screen and (min-width:768px) {
+
+
+
+}
+
+@media screen and (min-width:1024px) {
+    .panel-btn{
+      
+        top: 0;
+        padding: .5rem;
+    }
+    .pasos{
+        align-items: stretch;
+        flex-direction: row;
+    }
+    .paso1, .paso2, .paso3{
+        width: var(--width-cards);
+        height: fill;
+        margin: 0 16px;
+    }
+    .header{
+        padding: .5rem;
+        height: calc(var(--header-height) - .5rem);
+    }
+    
+}
