@@ -210,6 +210,8 @@ p{
 }
 .container{
     margin: auto;
+    padding: 30px;
+    text-align: center;
 }
 .pasos{
   display: flex;
@@ -230,16 +232,23 @@ p{
     text-align: left;
    
 }
+.card{
+
+    max-width: var(--width-cards);
+    border-radius: .5rem;
+    background: var(--white-color);
+    padding: 16px;
+    margin: 16px auto; 
+    text-align: center;
+
+}
 .paso1{
 
     max-width: var(--width-cards);
     border-radius: .5rem;
     background: var(--white-color);
     padding: 16px;
-    margin: 16px auto;
-    
-   
-   
+    margin: 16px auto; 
 
 }
 .paso2{
@@ -263,6 +272,49 @@ p{
 
 
 }
+/* ************ Historia ************ */
+.globo{
+    width: 100%;
+}
+.contenedor-ilustracion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor-ilustracion img:nth-child(1){
+   z-index: 996;
+   height: 500px;
+}
+.contenedor-ilustracion img:nth-child(2){
+    position: absolute;
+
+}
+.personaje-historia{
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+    0%{
+        transform: translate(0%, -5%);
+    }
+    50%{
+        transform: translate(0%, 7%);
+    }
+    100%{
+        transform: translate(0%, -5%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+
 
 /* ************ Footer ************ */
 .footer{

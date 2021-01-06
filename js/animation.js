@@ -1,4 +1,5 @@
 /* *************** Animations GSAP***************  */
+/* *************** Index***************  */
 
 // nav
 TweenMax.from("#header2", 1, {
@@ -53,6 +54,38 @@ TweenMax.from(".btn ", 1, {
 
 });
 
+/* *************** Historia ***************  */
+// texto
+TweenMax.from(".container h2", 1, {
+    delay: 1,
+    opacity: 0,
+    ease: Expo.easeInOut
+
+});
+//card
+TweenMax.from("#card", 1, {
+    delay: 1.5,
+    opacity: 0,
+    scale:0,
+    x: "100%",
+    ease: Expo.easeInOut
+
+});
+//ilustración
+TweenMax.from("#grafica-fondo", 1, {
+    delay: 1.5,
+    opacity: 0,
+    scale:0,
+    ease: Expo.easeInOut
+
+});
+TweenMax.from("#personaje-historia", 1, {
+    delay: 1.8,
+    opacity: 0,
+    y: -800,
+    ease: Expo.easeInOut
+
+});
 
 
 
