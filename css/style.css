@@ -346,7 +346,7 @@ p{
 .none{
     display: none;
 }
-.svg-icons{
+svg > .svg-icons{
     width: 150px;
     margin: auto;
 }
