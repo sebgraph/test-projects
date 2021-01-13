@@ -80,9 +80,9 @@ TweenMax.from("#grafica-fondo", 1, {
 
 });
 TweenMax.from("#personaje-historia", 1, {
-    delay: 1.8,
+    delay: 2,
     opacity: 0,
-    y: -800,
+    y: 200,
     ease: Expo.easeInOut
 
 });

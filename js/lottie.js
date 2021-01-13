@@ -1,8 +1,8 @@
 // Animación iconos
-const animationIcons = bodymovin.loadAnimation({
+const animationIconosJuega = bodymovin.loadAnimation({
     container: document.getElementById('icono-juega'),
     renderer: 'svg',
-    loop: true,
+    loop: 2,
     autoplay: true,
     path: './assets/icono_juega.json'
 });
