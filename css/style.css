@@ -403,5 +403,8 @@ p{
         padding: .5rem;
         height: calc(var(--header-height) - .5rem);
     }
+    .svg-icons {
+        width: 350px;
+    }
     
 }
