@@ -346,6 +346,10 @@ p{
 .none{
     display: none;
 }
+.svg-icons{
+    width: 150px;
+    margin: auto;
+}
 
 /* ************ Site Styles ************ */
 .header{
