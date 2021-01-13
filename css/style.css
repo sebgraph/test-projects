@@ -346,8 +346,8 @@ p{
 .none{
     display: none;
 }
-.svg-icons{
-    width: 150px!important;
+.svg-icons {
+    width: 150px;
     margin: auto;
 }
 
