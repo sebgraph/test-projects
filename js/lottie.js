@@ -53,14 +53,27 @@ function animacionPrueba(iconoPrueba){
             animation.stop();
           });
     }
+    for (let i = 0; i < iconoJuega.length; i++) {
+    animacionJuega(iconoJuega[i]);
+    }
+
+    for (let i = 0; i < iconoAprende.length; i++) {
+        animacionAprende(iconoAprende[i]);
+    }
+
+    for (let i = 0; i < iconoPrueba.length; i++) {
+        animacionPrueba(iconoPrueba[i]);
+    }
+    
+    
 
 
 
-     for (let i = 0; i < iconoJuega.length; i++) {
-     animacionJuega(iconoJuega[i]);
-     animacionAprende(iconoAprende[i]);
-     animacionPrueba(iconoPrueba[i]);
-     }
+
+
+
+     
+
 
 
 
